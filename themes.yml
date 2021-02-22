@@ -1,0 +1,131 @@
+apt_prerequisites:
+  - build-essential
+  - git
+  - gnome-themes-extra
+  - gtk2-engines-murrine
+  - sassc
+themes:
+  icons:
+    Fluent: 
+      repo: https://github.com/vinceliuice/Fluent-icon-theme.git
+      install: ./install.sh -d $HOME/.local/share/icons
+    Qogir: 
+      repo: https://github.com/vinceliuice/Qogir-icon-theme.git
+      install: ./install.sh -d $HOME/.local/share/icons
+    Tela: 
+      repo: https://github.com/vinceliuice/Tela-icon-theme.git
+      install: ./install.sh -d $HOME/.local/share/icons
+    Vimix: 
+      repo: https://github.com/vinceliuice/vimix-icon-theme.git
+      install: ./install.sh -d $HOME/.local/share/icons -a
+
+    ###> Apple flavor.
+    WhiteSur: 
+      repo: https://github.com/vinceliuice/WhiteSur-icon-theme.git
+      install: ./install.sh -d $HOME/.local/share/icons
+    WhiteSur-Cursors: 
+      repo: https://github.com/vinceliuice/WhiteSur-cursors.git
+      install: cp -fr ./ $HOME/.local/share/icons/WhiteSur-Cursors
+    Mac-OS-X-Lion:
+      repo: https://github.com/B00merang-Artwork/Mac-OS-X-Lion.git
+      install: cp -fr ./ $HOME/.local/share/icons/Mac-OS-X-Lion
+    McMojave-circle:
+      repo: https://github.com/vinceliuice/McMojave-circle.git
+      install: ./install.sh -d $HOME/.local/share/icons --all
+    Mac-OS-X-Cheetah:
+      repo: https://github.com/B00merang-Artwork/Mac-OS-X-Cheetah.git
+      install: cp -fr ./ $HOME/.local/share/icons/Mac-OS-X-Cheetah
+    ###> Apple flavor.
+
+    ###> Windows icons.
+    Windows-XP:
+      repo: https://github.com/B00merang-Artwork/Windows-XP.git
+      install: cp -fr ./ $HOME/.local/share/icons/Windows-XP
+    Windows-Longhorn:
+      repo: https://github.com/B00merang-Artwork/Windows-Longhorn.git
+      install: cp -fr ./ $HOME/.local/share/icons/Windows-Longhorn
+    Windows-7:
+      repo: https://github.com/B00merang-Artwork/Windows-7.git
+      install: cp -fr ./ $HOME/.local/share/icons/Windows-7
+    Windows-8:
+      repo: https://github.com/B00merang-Artwork/Windows-8.git
+      install: cp -fr ./ $HOME/.local/share/icons/Windows-8
+    Windows-10:
+      repo: https://github.com/B00merang-Artwork/Windows-10.git
+      install: cp -fr ./ $HOME/.local/share/icons/Windows-10
+    Windows-10-Dark:
+      repo: https://github.com/B00merang-Artwork/Windows-10-Dark.git
+      install: cp -fr ./ $HOME/.local/share/icons/Windows-10-Dark
+    ###< Windows themes.
+
+  GTK:
+    # Arc: # Requires GNOME shell
+    #   repo: https://github.com/horst3180/arc-theme.git
+    #   install: ./autogen.sh --prefix=$HOME/.local/ && sudo make install
+    # Materia: # Requires GNOME shell
+    #   repo: https://github.com/nana-4/materia-theme.git
+    #   install: ./install.sh
+    ChromeOS:
+      repo: https://github.com/vinceliuice/ChromeOS-theme.git
+      install: ./install.sh -d $HOME/.local/share/themes
+    Fluent:
+      repo: https://github.com/vinceliuice/Fluent-gtk-theme.git
+      install: ./install.sh -d $HOME/.local/share/themes
+    Matcha: 
+      repo: https://github.com/vinceliuice/Matcha-gtk-theme.git
+      install: ./install.sh -d $HOME/.local/share/themes
+    Orchis:
+      repo: https://github.com/vinceliuice/Orchis-theme.git
+      install: ./install.sh -d $HOME/.local/share/themes
+    Qogir: 
+      repo: https://github.com/vinceliuice/Qogir-theme.git
+      install: ./install.sh -d $HOME/.local/share/themes --logo ubuntu
+    Stylish: 
+      repo: https://github.com/vinceliuice/stylish-gtk-theme.git
+      install: ./install.sh -d $HOME/.local/share/themes --logo ubuntu
+
+    ###> Apple flavor.
+    Mojave: 
+      repo: https://github.com/vinceliuice/Mojave-gtk-theme.git
+      install: ./install.sh -d $HOME/.local/share/themes --icon ubuntu
+    Sierra: 
+      repo: https://github.com/vinceliuice/Sierra-gtk-theme.git
+      install: ./install.sh -d $HOME/.local/share/themes --noapple
+    WhiteSur: 
+      repo: https://github.com/vinceliuice/WhiteSur-gtk-theme.git
+      install: ./install.sh -d $HOME/.local/share/themes --icon ubuntu # --nautilus-use-colors
+    ###< Apple flavor.
+
+    ###> Windows themes.
+    Redmond-Themes:
+      repo: https://github.com/B00merang-Project/Redmond-Themes.git
+      install: cp -r ./Windows* $HOME/.local/share/themes
+    Windows-XP:
+      repo: https://github.com/B00merang-Project/Windows-XP.git
+      install: rm -rf README.md LICENSE.md && cp -r ./* $HOME/.local/share/themes
+    Windows-7:
+      repo: https://github.com/B00merang-Project/Windows-7.git
+      install: cp -fr ./ $HOME/.local/share/themes/Windows-7
+    Windows-Vista:
+      repo: https://github.com/B00merang-Project/Windows-Vista.git
+      install: cp -fr ./ $HOME/.local/share/themes/Windows-Vista
+    Windows-10:
+      repo: https://github.com/B00merang-Project/Windows-10.git
+      install: cp -fr ./ $HOME/.local/share/themes/Windows-10
+    ###< Windows themes.
+
+  KDE:
+    ChromeOS: 
+      repo: https://github.com/vinceliuice/ChromeOS-kde.git
+      install: ./install.sh
+    Qogir: 
+      repo: https://github.com/vinceliuice/Qogir-kde.git
+      install: ./install.sh
+    WhiteSur: 
+      repo: https://github.com/vinceliuice/WhiteSur-kde.git
+      install: ./install.sh
+  
+  # GRUB2:
+  #   tela:
+  #     repo: https://github.com/vinceliuice/grub2-themes
+  #     install: sudo ./install.sh --theme tela --screen 4k
